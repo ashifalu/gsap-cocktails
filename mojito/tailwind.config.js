@@ -1,0 +1,20 @@
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        yellow: "#e7d393",
+        "white-100": "#efefef",
+      },
+      fontFamily: {
+        sans: ["Mona Sans", "sans-serif"],
+        "modern-negra": ["Modern Negra", "sans-serif"],
+        serif: ["DM Serif Text", "serif"],
+      },
+    },
+  },
+  plugins: [],
+}

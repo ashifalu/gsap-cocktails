@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Modern Negra";
+  src: url("/fonts/Modern Negra Demo.ttf") format("truetype");
+}
+
+/* Global styles */
+html,
+body {
+  width: 100%;
+  background-color: black;
+  color: white;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* ---------- UTILITIES ---------- */
+@layer utilities {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .col-center {
+    @apply flex flex-col justify-center items-center;
+  }
+
+  .abs-center {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
+
+  .text-gradient {
+    background: linear-gradient(to bottom, #ffffff, #898989);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .radial-gradient {
+    background: radial-gradient(
+      circle at center,
+      #434343 0%,
+      #000 50%,
+      transparent 100%
+    );
+  }
+
+  .masked-img {
+    mask-image: url("/images/mask-img.png");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 50%;
+  }
+}
+
+/* ---------- COMPONENTS ---------- */
+@layer components {
+  main {
+    @apply w-full overflow-x-hidden;
+  }
+
+  nav {
+    @apply fixed z-50 w-full;
+  }
+
+  nav > div {
+    @apply flex md:flex-row flex-col md:justify-between items-center gap-5 py-5 lg:px-0 px-5 container mx-auto;
+  }
+
+  nav p {
+    @apply font-modern-negra text-3xl -mb-2;
+  }
+
+  nav a {
+    @apply cursor-pointer whitespace-nowrap md:text-base text-sm;
+  }
+
+  nav ul {
+    @apply flex-center lg:gap-12 gap-7;
+  }
+
+  .noisy {
+    @apply absolute inset-0 w-full h-full bg-[url("/images/noise.png")];
+  }
+
+  /* HERO */
+  #hero {
+    @apply relative z-10 min-h-screen w-full;
+  }
+
+  #hero h1 {
+    @apply md:mt-32 mt-40 text-8xl md:text-[20vw] leading-none text-center font-modern-negra;
+  }
+
+  video {
+    @apply w-full md:h-[80%] h-1/2 absolute bottom-0 left-0 md:object-contain object-cover;
+  }
+
+  /* ART */
+  #art {
+    @apply flex-center flex-col min-h-screen p-5 mt-20 relative radial-gradient;
+  }
+
+  #art h2 {
+    @apply relative md:text-[20vw] text-8xl leading-none font-modern-negra text-center text-[#505050] mb-8;
+  }
+
+  /* CONTACT */
+  #contact {
+    @apply relative px-4 text-center w-full overflow-hidden radial-gradient;
+  }
+
+  #contact .content {
+    @apply container mx-auto py-16 flex flex-col justify-between gap-10 min-h-screen;
+  }
+
+  #contact h2 {
+    @apply text-5xl lg:text-6xl 2xl:text-8xl font-modern-negra;
+  }
+}
