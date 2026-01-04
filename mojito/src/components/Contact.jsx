@@ -28,13 +28,13 @@ const Contact = () => {
         <div className="content">
             <h2>Where to Find Us </h2>
             <div>
-                <h3>Visit Our Bar</h3>
-                <p>456, Raq Blvd. #404, Los Angeles. CA 20980</p>
+                <h3>Visit Our Shop</h3>
+                <p>123 Downtown Street, Suite 45, City Name, Country</p>
             </div>
             <div>
                 <h3>Contact Us</h3>
-                <p>(555) 987-4567</p>
-                <p>hello@js@mocktail.com</p>
+                <p>(+00) 123-456-7890</p>
+                <p>contact@yourbrand.com</p>
             </div>
             <div>
                 <h3>Open Every Day</h3>
